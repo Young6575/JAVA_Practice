@@ -5,18 +5,33 @@ public class Member {
 	private int age;
 
 	public Member() {
-		this("guest");
-		//System.out.println("Member() 생성자 실행");
+		System.out.println("Member() 생성자 실행");
 	}
 	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
 	public Member(String name) {
-		this(name,0);
+		setName(name);
 	}
 	
 	public Member(String name, int age) {
-		this.name = name;
-		this.age = age;
-		System.out.println(name + " : " + age);
+		setName(name);
+		setAge(age);
+		System.out.println(getName() + " : " + getAge());
 	}
 
 

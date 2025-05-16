@@ -1,4 +1,4 @@
-package 자바_6장_객체지향구현;
+package 자바_6장_객체지향구현.training;
 
 class Car {
 	String manufacturer; // 제조사
@@ -17,7 +17,6 @@ class Car {
 		this.length = length;
 		this.width = width;
 		this.speed = speed;
-		setSegment(length);
 	}
 
 	public void checkSpeeding() {
@@ -35,14 +34,8 @@ class Car {
 		}
 	}
 
-	private void setSegment(int length) {
-
-//		if (length < 4200) { segment = "B-세그먼트 (소형차)";}
-//		if (length >= 4200 & length < 4600) { segment = "C-세그먼트 (준중형, 소형 패밀리카)";}
-//		if (length >= 4600 & length < 4900) { segment = "D-세그먼트 (중형차, 패밀리 세단)";}
-//		if (length >= 4900 & length < 5100) {segment = "E-세그먼트 (대형차, 고급 세단)";}
-//		if (length >= 5100) {segment = "F-세그먼트 (초대형차, 플래그십 세단)";}
-
+	public static String setSegment(int length) {
+		String segment = "";
 		if (length < 4200) {
 			segment = "B-세그먼트 (소형차)";
 		} else if (length < 4600) {
@@ -53,20 +46,24 @@ class Car {
 			segment = "E-세그먼트 (대형차, 고급 세단)";
 		} else
 			segment = "F-세그먼트 (초대형차, 플래그십 세단)";
+		return segment;
 	}
 
 	public String toString() {
 	        return "제조사="+ manufacturer + ", 모델= " + model +", 중량= "+ weight +", 전장= "+ length +", 전폭= "+ width +", 속도= "+ speed;
 	 }
 
+	public void setSegment(String segment) {
+		this.segment = segment;
+	}
+	
 	public String getSegment() {
 
 		return model + " : " + segment;
 	}
-
 }
 
-public class 실습_5_1_클래스자동차정의 {
+public class 실습_5_1_클래스자동차정의2 {
 
 	/*
 	 * 클래스 Car: // 필드 (속성) String manufacturer; // 제조사 String model; // 모델명 double
@@ -94,6 +91,12 @@ public class 실습_5_1_클래스자동차정의 {
 		Car car1 = new Car("Hyundai", "Sonata", 1400, 4600, 1800, 95);
 		Car car2 = new Car("BMW", "M3", 1200, 4500, 1700, 110);
 
+		String seg = Car.setSegment(car1.length);
+		car1.setSegment(seg);
+
+		seg = Car.setSegment(car2.length);
+		car2.setSegment(seg);
+		
 		// 도로별 제한 속도 설정
 		int cityLimit = 50; // 도심 제한 속도
 		int highwayLimit = 100; // 고속도로 제한 속도
