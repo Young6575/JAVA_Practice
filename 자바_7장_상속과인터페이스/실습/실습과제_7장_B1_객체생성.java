@@ -33,7 +33,7 @@ class Item { // 제품
 		
 		item.stockQuantity = item.stockQuantity-quantity;
 		
-		System.out.println(item.name+ "의수량감소: " + item.stockQuantity);
+		System.out.println(item.name+ "의수량감소("+ "-" +quantity+"): " + item.stockQuantity);
 		
 		
 	}
@@ -46,7 +46,7 @@ class Item { // 제품
 		
 		item.stockQuantity = item.stockQuantity+quantity;
 		
-		System.out.println(item.name+ "의수량증가: " + item.stockQuantity);
+		System.out.println(item.name+ "의수량증가(+"+ quantity + "): " + item.stockQuantity);
 		
 	}
 
