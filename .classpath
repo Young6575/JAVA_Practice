@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="자바_6장_객체지향구현/" kind="src" path=""/>
+	<classpathentry kind="src" path="자바_6장_객체지향구현"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
