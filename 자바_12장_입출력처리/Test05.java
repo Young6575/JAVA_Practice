@@ -31,6 +31,7 @@ public class Test05 {
 			System.out.println("파일 길이 : " + file.length() + "바이트");
 			} else {
 				System.out.println("작업할 파일이 존재하지 않음");
+				
 			}
 			
 			File subdir = new File("c:\\work\\subdir");
