@@ -13,7 +13,9 @@ public class Test01 {
 				fo.write(c);
 			}
 		}
+		
 		catch(Exception e) {
+			e.printStackTrace();
 			e.printStackTrace();
 		}
 	}
