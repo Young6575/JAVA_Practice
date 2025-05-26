@@ -127,7 +127,12 @@ class Library {
 	}
 
 	public Book searchBookByTitle(String title) {
-			
+		
+		for (Book book :books) {
+			if (book.getTitle()==title) {
+				return book;				
+			}
+		}
 		return null;
 	}
 }
@@ -192,8 +197,8 @@ public class 실습11_C3_예외처리_과제 {
 		e.printStackTrace();
 	}
 
-		library.sortBooksByISBN();
-		library.printBooks("\nISBN정렬 도서 목록:");
+		library.printBooks("\n선택 도서 목록:");
+		library.searchBookByTitle("자바");
 		
 		// 최종 도서 목록 출력
 		library.printBooks("\n최종 도서 목록:");
